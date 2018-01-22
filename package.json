@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "test": "./node_modules/.bin/mocha test/**/*.spec.js",
-    "test:tdd": "./node_modules/.bin/mocha test/**/*.spec.js --watch"
+    "test": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha test/**/*.spec.js  --require babel-registe --watch"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/claudvanbarret/js-tdd-course#readme",
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
