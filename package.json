@@ -6,7 +6,12 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
     "test": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register",
-    "test:tdd": "./node_modules/.bin/mocha test/**/*.spec.js  --require babel-register --watch"
+    "test:tdd": "./node_modules/.bin/mocha test/**/*.spec.js  --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "reporter": ["text", "html"],
+    "exclude": ["test/**"]
   },
   "repository": {
     "type": "git",
